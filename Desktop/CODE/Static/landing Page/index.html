@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abishek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Freehand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="/dist/output.css" rel="stylesheet">
+
+</head>
+<style>
+    .navigation{
+        transition: 0.4s;
+    }
+    .banner{
+        background: url(pizza.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .logo {
+        font-family: 'Parisienne', cursive;
+    }
+    .hide{
+        transition: 0.5;
+        left: -200px;
+    }
+    .unhide {
+        transition: 0.5;
+        left: 0px;
+    }
+</style>
+
+<body>
+    <div class="">
+        <nav class="grid grid-cols-3 gap-2 justify-between z-10 bg-white">
+            <div class="px-5 py-4 text-pink-500 text-4xl logo font-bold">
+                Abhi
+            </div>
+            <div class="col-start-3 row-span-1 flex justify-center px-9 items-end flex-col gap-2 lines ">
+                <div class="w-8 h-[2px] line1 bg-black"></div>
+                <div class="w-8 h-[2px] line2 bg-black"></div>
+                <div class="w-8 h-[2px] line3 bg-black"></div>
+            </div>
+            <div class="py-3 col-span-3 transition duration-700 delay-70000 px-9 hide absolute top-20 navigation bg-slate-100 bg-opacity-20  text-white backdrop-blur-xl">
+                <ul class="">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contacat Us</li>
+                </ul>
+            </div>
+        </nav>
+        
+    <div class="w-full h-screen relative -z-10 banner">
+        <!-- <img src="pizza.jpg" alt=""> -->
+        <div class="flex items-start py-20  justify-center h-full">
+            <h1 class="text-6xl text-white first-letter:text-red-700 first-letter:font-bold"><span class="
+                logo font-bold">Hey</span> I`am Abhishek</h1>
+        </div>
+
+    </div>
+    </div>
+
+    <script>
+        const line = document.querySelector('.lines')
+        line.addEventListener('click', () => {
+            const navigation = document.querySelector('.navigation');
+            const line1=document.querySelector('.line1')
+                const line2=document.querySelector('.line2')
+                const line3=document.querySelector('.line3')
+            if (navigation.classList.contains('hide')) {
+                navigation.classList.remove('hide')
+                navigation.classList.add('unhide')
+                
+
+            }
+            else {
+                navigation.classList.remove('unhide')
+                navigation.classList.add('hide')
+                line1.classList.remove('rotate-45')
+
+
+            }
+
+
+        })
+    </script>
+</body>
+
+</html>
